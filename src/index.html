@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkyCast Weather App</title>
+  </head>
+  <body data-weather="default">
+    <main class="app">
+      <h1 class="app__title">SkyCast</h1>
+
+      <form id="search-form" class="search" autocomplete="off">
+        <input
+          id="location-input"
+          type="text"
+          placeholder="Search a city, e.g. Kigali"
+          aria-label="Location"
+          required
+        />
+        <button type="submit">Search</button>
+        <button
+          type="button"
+          id="unit-toggle"
+          class="unit-toggle"
+          aria-label="Toggle temperature unit"
+        >
+          °C
+        </button>
+      </form>
+
+      <div id="loading" class="loading" hidden>
+        <div class="spinner"></div>
+        <p>Fetching the forecast…</p>
+      </div>
+
+      <p id="error" class="error" role="alert" hidden></p>
+
+      <section id="weather" class="weather" hidden></section>
+
+      <footer class="footer">
+        Weather data by
+        <a href="https://www.visualcrossing.com/" target="_blank" rel="noopener">Visual Crossing</a>
+      </footer>
+    </main>
+  </body>
+</html>
